@@ -1,35 +1,9 @@
 #include <iostream> // preprocessor statement , process before complie
 using namespace std; // to avoid writing std:: before every standard library function
- int number1 = 100 ; //global variable 
 
- int main(){
-  
-     cout << INT_MAX << endl; // the maximum value of int
-     cout << INT_MIN << endl; // the minimum value of int
-     cout << sizeof(int) << endl; // the size of int in bytes ==> 2 or 4 bytes depend on the system
-     cout << sizeof(float) << endl; // the size of float in bytes // 4 bytes
-      cout << sizeof(double) << endl; // the size of double in bytes // 8 bytes
-       cout << sizeof(char) << endl; // the size of char in bytes  // 1 byte
-        cout << sizeof(bool) << endl; // the size of bool in bytes  // 1 byte
-   
-        int num =190 ;
-         num = 191.5;
-         cout<< sizeof(num) << endl; // the size of num in bytes  // 4 bytes
-          cout << num << endl; // the value of num after assigning a float value to it // 191 because the decimal part will be truncated when assigning a float value to an int variable
 
-          double dou = 22 ;
-          dou =23.4;
-          cout << sizeof(dou) << endl; // the size of dou in bytes  // 8 bytes
-           cout << dou << endl; // the value of dou after assigning a float value to it // 23.4 because double can store decimal values without truncation
-           float fl =  10.5 + 9.5; // here the compiler work with this number as double because the default type for floating point numbers is double
-           float fl =  10.5f + 9.5f; // here we tell the compiler that this number is a float by adding f at the end of the number
-           cout << sizeof(fl) << endl; // the size of fl in bytes  // 4 bytes
-            cout << fl << endl; // the value of fl after assigning a float value to it // 20 because the decimal part will be truncated when assigning a double value to a float variable
+ 
 
-             return 0 ;
-             auto mix = 9.5; // compiler will detect that mix is a double because the value assigned to it is a double
-            auto mix = 9.5f; // float 
-   }   
 
   
 
@@ -219,3 +193,254 @@ escape sequences characters
              auto mix = 9.5; // compiler will detect that mix is a double because the value assigned to it is a double
             auto mix = 9.5f; // float 
  */
+/*
+    primitives data types
+     char ===> charachter 
+     added Inside Single code for information Interchange.
+     A Way of nRepresenting Charaters As Numbers
+
+     ....Search For Type Casting
+     ....Create App toConvert ASCII to Character
+     Create App To Convert Charchter To ASCII
+
+     // code 
+      
+      char d = 'D'; // must be in single quotes because it's a charachter
+    cout << d << endl; // print the value of d which is 'D' and end line
+     cout << int(d) << endl; // print the ASCII value of d which is 68 and end line
+      // int('A') ==> give you the ascii value of the A 'a' diffrent from 'A' because the ASCII value of 'a' is 97 and the ASCII value of 'A' is 65
+      int ASCII_VALUE =97;
+       cout << char(ASCII_VALUE) << endl; // print the charachter that corresponds to the ASCII value of 97 which is 'a' and end line
+       
+   cout << "Please insert the charachter to convert it to ASCII value : " << endl ;
+    char ch;
+    cin >> ch ;
+     cout<<"the ASCII value of " << ch <<" is equall" << int(ch) << endl; // print the ASCII value of the charachter that user input and end line
+     cout<< string(20, '*') << endl; // print 20 stars and end line
+     cout << "Please insert the ASCII value to convert it to charachter : " << endl ;
+      int ascii_value;
+      cin >> ascii_value ;
+      cout << " the charachter that corresponds to the ASCII value of " << ascii_value << " is equall " << char(ascii_value) << endl; // print the charachter that corresponds to the ASCII value that user input and end line
+ 
+       return 0 ;
+*/
+
+/*
+  bool ==> boolean
+  only two values true or false
+  in case of true the value is 1 and in case of false the value is 0
+  values in case senstive
+  when we use bolean values 
+    anything has on/off , yeas/no , true/ false
+    test boolean in math
+    test > and < 
+    test data [100 , 0 , -100]
+
+    void ==> valueless
+     without values 
+
+     // code 
+
+         bool is_open = true ;
+     cout << sizeof(is_open) << endl; // the size of is_open in bytes  // 1 byte
+     cout << is_open + 1 << endl; // the value of is_open after adding 1 to it // 2 because true is 1 and false is 0
+     bool test = 10 > 5 ; // the value of test is true because 10 is greater than 5
+     cout << test << endl; // print the value of test which is true and end line
+     bool test_two = -100;
+     bool test_Three = 0;
+     cout << test_two << endl; // print the value of test_two which is true because any non-zero value is considered true in boolean context 
+     cout << test_Three << endl; 
+     return 0 ;
+void whithout_return() // function declaration
+ {
+  // Nothing to return 
+    
+ }
+*/
+
+/*
+   modifiers and type alias
+    modifiers 
+     modify the length of data ==> see limites 
+     signed [int  ,char ]
+      ....store postive , negative integers and  0 
+        int is signed By defualt
+     unsigned [int ,char]
+     .....store the postives only 
+     
+     short[int]
+     ....Can Be short insted of short int 
+
+     long[int ,double]
+     ........store maximum value
+     .....can be long insted of long int 
+
+
+     type alias 
+......using modifiers = type;
+typedef unsigned long UL
+
+
+  //code 
+
+      signed int num_one = 1000 ; 
+    signed int num_two = -1000;
+
+    unsigned  int num_three = 1001 ;
+    unsigned int num_four =  -1002 ;  // will cause undefined behavior
+     
+     // if i want use a litle space in memory i can use short int instead of int
+   short int num_five = 1003 ;  // cann be write as short num_five = 1003 ;
+    cout<<sizeof(num_five)<<endl; // 2 bytes
+     
+    // if you wnat to store larg numbers , use long
+     long int num_six = 8000000 ; // can be write as long num_six = 1004 ;
+     cout<< num_six << "\n";
+     cout << sizeof(num_six) << endl ; // 4 bytes
+     // if you want to be more accurrate, and calc high precison values with double value , use long double 
+     long double num_seven = 1005.12345678901234567890L ;
+     double num_eight = 1005.12345678901234567890;
+     cout<< num_seven << "\n";
+     cout<<num_eight << "\n";
+ /////////////////////////////
+   typedef unsigned long UL; /// TYPE ALIAS (اسم مستعار )
+
+ UL number = 1000; // == UNSIGNED LONG number = 1000;
+ cout << number << endl;
+
+ // new way to create type alias in c++11 and above
+  using ULL = unsigned long; // == typedef unsigned long UL;
+
+  ULL number2 = 200;
+  cout<<number2 << endl;
+
+
+
+*/
+
+/*
+  type conversion 
+     convert data of one type to another type
+
+     --Implicit conversion 
+-------------Conversion is Done Autmatically by the compiler 
+
+     ---- Explicit conversion
+  -----------conversion is done by programmer  , using type casting or function li
+
+
+     ---data loss
+      ----when larger type is converted to smaller type
+
+       // code 
+
+        int num1 = 20 ;
+    char ch = 'C';
+     cout << num1 + ch <<endl;
+
+    //  cout <<int(ch) << endl;// 67
+     
+    cout <<"\n====================\n";
+    cout <<"====================\n";
+     double b = 20.5;
+     int num3 = 20;
+     cout<< b + num3 << endl;
+     cout << sizeof(b+num3) << endl;
+
+    cout <<"====================\n";
+    cout <<"====================\n";
+  double c = 20.5;
+     int num4 = 20;
+     cout<< (int)c + num4 << endl;  // type casting
+     cout<< int(c) + num4 << endl;  // type casting
+     cout << sizeof((int)c+num4) << endl;
+     cout << sizeof(int(c)+num4) << endl;
+    cout <<"====================\n";
+    cout <<"====================\n";
+    
+
+
+*/
+
+/*
+  arithmetic operators 
+   + , - , * , / , % , ++ , -- 
+   + addition
+   - subtraction
+   * multiplication
+   / division
+   % modulus ==> work with integers only , return the remainder of the division
+   ++ increment
+   -- decrement
+*/
+
+ /*
+  Assignment operators : for assignning operations
+   = , += , -= , *= , /= , %=  
+   = assignment
+   += addition assignment
+   -= subtraction assignment
+   *= multiplication assignment
+   /= division assignment
+   %= modulus assignment
+ 
+*/
+/*
+  increament and decrement operators
+   pre/post increment and decrement
+*/
+
+/*
+comparison operators 
+  == , != , > , < , >= , <= 
+  == equal to
+  != not equal to
+  > greater than
+  < less than
+  >= greater than or equal to
+  <= less than or equal to
+*/
+/*
+logical operators 
+  && , || , ! 
+  && logical AND
+  || logical OR
+  ! logical NOT
+*/
+/*
+ precedence of operators 
+  1) () parentheses
+  2) ++ , -- pre increment and decrement
+  3) * , / , % multiplication , division and modulus
+  4) + , - addition and subtraction
+  5) == , != , > , < , >= , <= comparison operators
+  6) && logical AND
+  7) || logical OR
+   in case of same precedence, the associativity is from left to right
+
+   betwise operatots : 
+      
+   spaceship operators : 
+*/
+/*
+  cotrol flow - if condition 
+  syntax 
+   if (condition is true) {
+    // code to be executed if condition is true
+   } else {
+    // code to be executed if condition is false
+   }
+*/
+int main () 
+{  
+     int age;
+     cin >> age ;
+      cout <<"Welcome \n";
+       if(age  < 18)
+       {
+         cout << "beWare you are under age \n";
+       }
+       cout <<"See you \n"; 
+  return 0 ; 
+  
+}
