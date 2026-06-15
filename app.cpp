@@ -429,11 +429,7 @@ logical operators
     // code to be executed if condition is true
    } else {
     // code to be executed if condition is false
-   }
-*/
-int main () 
-{  
-     int age;
+         int age;
      cin >> age ;
       cout <<"Welcome \n";
        if(age  < 18)
@@ -443,4 +439,290 @@ int main ()
        cout <<"See you \n"; 
   return 0 ; 
   
+   }
+*/
+/*
+   else if , else 
+   //code 
+
+    int age =18 ;
+   const int points = 500 ;
+   int Rank =4;
+   if(age>=18){
+     cout << "Welcome \n";
+   }else if(points > 200){
+    cout<<"Welcome Your points is Okay \n";
+   }else if (Rank>=5){
+     cout<<"Welcome Your Rank is Okay \n";
+   }else{
+     cout<<"Iam sorry \n";
+   }
+*/
+/*
+ Nested if Conditions
+
+ //CODE 
+
+  int age = 27;
+   int points= 1500;
+    if(age>=20)
+    {
+       cout<< "Welcome Your Age is Okay \n";
+       if(points>=1000)
+       {
+         cout<<"Welcome Your VIP \n";
+    }
+  }
+
+*/
+/*
+  ternary operator
+   syntex 
+   (condition is true) ? (code to be executed if condition is true) : (code to be executed if condition is false);
+
+   // code 
+     int age = 19;
+   cout << (age >=18) ?  "Your Age is Accepted" : "Your Age is Not Accepted" ;
+    // can asssign to variable
+     string message =  (age >=18) ?  "Your Age is Accepted" : "Your Age is Not Accepted" ;
+  return 0 ; 
+*/
+
+/*
+ Nested ternary operator 
+  syntex 
+  (condition1) ? (code to be executed if condition1 is true) : (condition2) ? (code to be executed if condition2 is true) : (code to be executed if both conditions are false);
+
+  // code 
+    int age = 20;
+int points = 900;
+   cout << (age>=22 ? "Your age not accepted" : (points >=800 ? "Your points is accepted" : "Your points is not accepted")) ;
+*/
+/*
+ 4 traning  app
+  ----even / odd Checker
+      ---- code
+                int num ;
+     cin >> num;
+      if(num % 2 ==0)
+      cout << "The Numbe "<< num << "is Even \n";
+      else
+      cout << "The Numbe "<< num << "is odd \n";
+      // with ternary
+  cout <<( num % 2 == 0 ?"Even " :  "Odd ");
+  ...........................................
+  ------find Greatest Number
+  .....code
+            int a , b ,c ;
+   cin >> a >>b >>c ;
+     if(a > b && a > c){
+       cout << a << " is the greatest number \n";
+     }else if(b>a && b > c){
+        cout << b << "is the greatest number \n";
+     }else{
+       cout<< c << "is the greatest number \n";
+     }
+     // with ternert
+     string msg = (a > b && a > c) ? to_string(a) + " is the greatest number \n" : (b > a && b > c) ? to_string(b) + " is the greatest number \n" : to_string(c) + " is the greatest number \n";
+     cout << msg;
+
+     ......................................................
+  ------------User Rank checker
+              ....code 
+                int Rank;
+    cin >>Rank;
+     if(Rank == 0)
+     cout << "Your Rank is not valid \n";
+      cin >> Rank;
+      if(Rank>0 && Rank <= 500)
+       cout << "Your Rank Not bad \n";
+    else if(Rank>=501 && Rank <= 1000)
+       cout << "Your Rank is Good \n";
+       else
+       cout<< "Your rank is good";
+       return 0 ; 
+  
+  ---simple calculator
+  ............code 
+      int num1 , num2 ,op;
+   cout << "Type number 1 \n";
+   cin >> num1 ;
+   
+   cout << "Type number 2 \n";
+   cin >> num2 ;
+    cout << "choose operation \n";
+  cout << "[1] + \n";
+  cout << "[2] - \n";
+  cout << "[3] * \n";
+  cout << "[4] / \n";
+   cin >>  op;
+    if(op == 1)
+       cout << "Result: " << num1 + num2 << "\n";
+    else if(op == 2)
+       cout << "Result: " << num1 - num2 << "\n";
+    else if(op == 3)
+       cout << "Result: " << num1 * num2 << "\n";
+    else if(op == 4)
+       cout << "Result: " << num1 / num2 << "\n";
+    else
+       cout << "Invalid operator" << "\n"; 
+
+
+*/
+/*
+ switch 
+ ........code 
+  int day = 1;
+  switch(day)
+  {
+     case 1 :
+     case 2 :
+        cout << "Open at 9:00 AM \n";
+        break;
+      case 3 :
+        cout << "Open at 9:00 AM \n";
+        break;
+        default:
+        cout << "Invalid day \n";
+      }
+
+
+*/
+/*
+ apps on switch
+   /// 1 
+    int code ;
+
+   cout << "Enter yout code \n";
+   cin >> code ;
+    switch(code)
+    {
+       case 100:
+       case 110:
+       case 120:
+        cout << "Congrats you  won iphone \n";
+        break;
+        case 200:
+          cout << "congrats you  won ipad \n";
+          break;
+          case 300:
+           cout << " congrats you  won macbook \n";
+           break;
+            default:
+             cout << "Invalid code \n";
+    }
+
+    .................
+    //app 2 )
+        int price = 100;
+   int discount =10;
+   int years;
+   cout<<"type the number of years in the company \n";
+   cin >> years;
+     switch(years)
+     {
+       case 1 : 
+       discount= 20;
+       break;
+       case 2 : 
+       discount= 30;
+       break;
+       case 3 : 
+       discount= 40;
+       break;
+     }
+     cout << "The price is " << price - discount << "\n";
+    return 0;
+
+}
+     ......................
+     //app 3 ) 
+       int num1 , num2 ,op;
+   cout << "Type number 1 \n";
+   cin >> num1 ;
+   
+   cout << "Type number 2 \n";
+   cin >> num2 ;
+    cout << "choose operation \n";
+  cout << "[1] + \n";
+  cout << "[2] - \n";
+  cout << "[3] * \n";
+  cout << "[4] / \n";
+   cin >>  op;
+    switch(op)
+    {
+       case 1 :
+        cout << "Result : " << num1 << "+" << num2 << " = " << num1 + num2 << "\n";
+        break;
+      case 2 :
+        cout << "Result: "<< num1 << "-" << num2 << " = "<< num1 - num2 << "\n";
+        break;
+      case 3 :
+        cout << "Result: "  << num1 << "*" << num2 << " = " << num1 * num2 << "\n";
+        break;
+      case 4 :
+        cout << "Result: " << num1 << "/" << num2 << " = " << num1 / num2 << "\n";
+        break;
+      default:
+        cout << "Invalid operator" << "\n"; 
+    }
+  
+     
+*/
+/*
+ Array : what is array ?
+   collection of elements of the same type stored in contiguous memory locations
+   referanced by index started from 0
+   why we need array ?
+    creating array syntex
+    check array size
+     create array without size
+
+      //code 
+         int nums[4] = {12 ,12, 13,14};
+   cout << sizeof(nums); // 16
+   cout << sizeof(int); // 2
+  
+
+   int rands[] ={12,12,12};   // valid
+   int randss[]{12,12,12}; // valid  
+*/
+
+/*
+  Access elemnts & memory location 
+
+   .........code 
+       int nums[]{100,200,900};
+   cout << "First Element :" << nums[0] << "\n";
+   cout << "last Element :" << nums[2] << "\n";
+    // location
+     cout <<"First Element Location : " <<&nums[0] << "\n";
+     cout <<"Second Element Location : " <<&nums[1] << "\n";
+     cout <<"Third Element Location : " <<&nums[2] << "\n";
+*/
+/*
+ Arrays 
+  declare empty array
+  add elements to arrray 
+   update array element 
+    get len of array with sizeof 
+
+    ............
+    //code 
+       int nums[4] ;
+   nums[3] = 400 ;
+   nums[2] = 500 ;
+   nums[0] = 600 ;
+   nums[1] = 200 ;
+       cout << "Element 1 : " << nums[0] << "\n";
+       cout << "Element 2 : " << nums[1] << "\n";
+       cout << "Element 3 : " << nums[2] << "\n";
+       cout << "Element 4 : " << nums[3] << "\n";
+  return 0; 
+  int anums[] = {100,209,300,400,500,600};
+  cout << "The number of elements in the array is : " << sizeof(anums) / sizeof(anums[0]) << "\n"; 
+*/
+int main () 
+{
+
 }
