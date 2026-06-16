@@ -1,57 +1,49 @@
-#include <iostream> // preprocessor statement , process before complie
+#include <iostream>  // preprocessor statement , process before complie
 using namespace std; // to avoid writing std:: before every standard library function
 
+// how c++ works
+// 1) process
+// 2) create translation unit
+// 3) compiler translate that into object file
+// 4) linker == to link all object and produce the exe file to run the file
 
- 
+//  << stream insertion operator
+//  \n special character for new line
+// std:: is the standard namespace for input and output stream in c++
 
-
-  
-
-
-// how c++ works  
-// 1) process 
-//2) create translation unit 
- // 3) compiler translate that into object file 
- // 4) linker == to link all object and produce the exe file to run the file 
-
- //  << stream insertion operator 
- //  \n special character for new line
- // std:: is the standard namespace for input and output stream in c++
-
-
- // comments
-  // single line comment
- /* multi line comment
-  any line you want to write here will be ignored by the compiler    
- */
+// comments
+// single line comment
+/* multi line comment
+ any line you want to write here will be ignored by the compiler
+*/
 
 /*
-   syntax 
+   syntax
    [variable_type] [variable_name] = [value] ;
-     
+
 */
 
 /*
   variable nameing Rules & best practices
-  ===Naming rules 
-  ----must be uniqe 
+  ===Naming rules
+  ----must be uniqe
   ----- case sensitive
-  ------ cannot start with numbes 
+  ------ cannot start with numbes
   ---- numbers or letters or underscore
   ----- no white space or special characters
    ----- reserved keywords "class" , "public",..,
 
 */
- /*
- variable advanced knowledge
-  -Declare variables without value   + change later 
-  decalre multiple variables without value + change later
-   - declare multiple variables with same value
-  
- */
 /*
- variable scope 
-   
+variable advanced knowledge
+ -Declare variables without value   + change later
+ decalre multiple variables without value + change later
+  - declare multiple variables with same value
+
+*/
+/*
+ variable scope
+
 */
 
 /*
@@ -76,39 +68,39 @@ using namespace std; // to avoid writing std:: before every standard library fun
       cout << "Age in second :" << age_in_second << " second\n";
 */
 /*
-escape sequences characters 
+escape sequences characters
   \n new line
   \t tab
   \\ backslash
   \" double quote
   \' single quote
-  \a 
-  \b 
-   ex 
+  \a
+  \b
+   ex
     cout << "line 1\n";
      cout<< "line 2\\"; // the backslash will wrint with txt
      cout<<"line \"4\"\n"; // if tou want to print \"....\" in the text
-     cout <<"line4\t \n"; // spaces 
-     cout<<"line5\a\n"; // 
+     cout <<"line4\t \n"; // spaces
+     cout<<"line5\a\n"; //
      cout<< "kamal\raboueidd\n";
      cout << "line"; // this is a line \
 */
 /*
- Data types 
+ Data types
  what is date ?
-  data ex in real life 
-  integer 
+  data ex in real life
+  integer
   string
-  boolean 
-  float 
-  array 
-   /== why we choose data ? 
- what is operand ? 
+  boolean
+  float
+  array
+   /== why we choose data ?
+ what is operand ?
    the part of an instruction representing the data manipulated by the operation specified by the operator
 
 */
 /*
-  data types 
+  data types
    ram [R]andom [A]ccess [M]emory
    computer memeory has locations
     data sizes
@@ -119,27 +111,27 @@ escape sequences characters
      Giga Byte ===> 1024 Mega byte
      Tera Byte====> 1024 Giga Byte
 
-     Data types with sizes 
+     Data types with sizes
       int ==> 2 or 4 bytes ==> cover latter only
       float ==> 4 bytes [18.5666]
       double ==> 8bytes [18.56666666666666]
-      Number . fractional component 
+      Number . fractional component
       char ==> 1 Byte ===> "A" "X" "9"
-       boolean 1 Byte ===> True or False 
-       Double vs Float 
+       boolean 1 Byte ===> True or False
+       Double vs Float
          double is more precise than float
          doble can store more decimal places than float
          after dot double can store 15-16 decimal places while float can store 6-7 decimal places
 
-         the story behind ceating a variable 
+         the story behind ceating a variable
          === declare a variable
          tell the computer that we need to reserve x bytes of memory depend on data type
          restrict type of data to the type we choosen
 
          ---declaer variable without type
-         see the memory address & 
-      ==== auto , make the complier detect the type of variable based on the value assigned to it 
-      int num = 20 ; 
+         see the memory address &
+      ==== auto , make the complier detect the type of variable based on the value assigned to it
+      int num = 20 ;
       auto num2 = 20 ; the compiler will detect that num2 is a int because the value assigned to it is a int
 
  aplication to create app ask you to type number of kilobytes
@@ -154,19 +146,19 @@ escape sequences characters
      return 0 ;
  */
 /**
-    primative data types 
-     int  ==> integer 
-     test numbers 
-     test floating point vs int 
+    primative data types
+     int  ==> integer
+     test numbers
+     test floating point vs int
      store from -21....., 21.......
      INT_MIN , INT_MAX
    check limits header file limits.h
      est size of data types without variables & use end line
-      assignmnet operator 
-      
+      assignmnet operator
+
       float ==> floating point number
-         double ==> more precise than float 
-        
+         double ==> more precise than float
+
               cout << INT_MAX << endl; // the maximum value of int
      cout << INT_MIN << endl; // the minimum value of int
      cout << sizeof(int) << endl; // the size of int in bytes ==> 2 or 4 bytes depend on the system
@@ -174,7 +166,7 @@ escape sequences characters
       cout << sizeof(double) << endl; // the size of double in bytes // 8 bytes
        cout << sizeof(char) << endl; // the size of char in bytes  // 1 byte
         cout << sizeof(bool) << endl; // the size of bool in bytes  // 1 byte
-   
+
         int num =190 ;
          num = 191.5;
          cout<< sizeof(num) << endl; // the size of num in bytes  // 4 bytes
@@ -191,11 +183,11 @@ escape sequences characters
 
              return 0 ;
              auto mix = 9.5; // compiler will detect that mix is a double because the value assigned to it is a double
-            auto mix = 9.5f; // float 
+            auto mix = 9.5f; // float
  */
 /*
     primitives data types
-     char ===> charachter 
+     char ===> charachter
      added Inside Single code for information Interchange.
      A Way of nRepresenting Charaters As Numbers
 
@@ -203,15 +195,15 @@ escape sequences characters
      ....Create App toConvert ASCII to Character
      Create App To Convert Charchter To ASCII
 
-     // code 
-      
+     // code
+
       char d = 'D'; // must be in single quotes because it's a charachter
     cout << d << endl; // print the value of d which is 'D' and end line
      cout << int(d) << endl; // print the ASCII value of d which is 68 and end line
       // int('A') ==> give you the ascii value of the A 'a' diffrent from 'A' because the ASCII value of 'a' is 97 and the ASCII value of 'A' is 65
       int ASCII_VALUE =97;
        cout << char(ASCII_VALUE) << endl; // print the charachter that corresponds to the ASCII value of 97 which is 'a' and end line
-       
+
    cout << "Please insert the charachter to convert it to ASCII value : " << endl ;
     char ch;
     cin >> ch ;
@@ -221,7 +213,7 @@ escape sequences characters
       int ascii_value;
       cin >> ascii_value ;
       cout << " the charachter that corresponds to the ASCII value of " << ascii_value << " is equall " << char(ascii_value) << endl; // print the charachter that corresponds to the ASCII value that user input and end line
- 
+
        return 0 ;
 */
 
@@ -230,16 +222,16 @@ escape sequences characters
   only two values true or false
   in case of true the value is 1 and in case of false the value is 0
   values in case senstive
-  when we use bolean values 
+  when we use bolean values
     anything has on/off , yeas/no , true/ false
     test boolean in math
-    test > and < 
+    test > and <
     test data [100 , 0 , -100]
 
     void ==> valueless
-     without values 
+     without values
 
-     // code 
+     // code
 
          bool is_open = true ;
      cout << sizeof(is_open) << endl; // the size of is_open in bytes  // 1 byte
@@ -248,56 +240,56 @@ escape sequences characters
      cout << test << endl; // print the value of test which is true and end line
      bool test_two = -100;
      bool test_Three = 0;
-     cout << test_two << endl; // print the value of test_two which is true because any non-zero value is considered true in boolean context 
-     cout << test_Three << endl; 
+     cout << test_two << endl; // print the value of test_two which is true because any non-zero value is considered true in boolean context
+     cout << test_Three << endl;
      return 0 ;
 void whithout_return() // function declaration
  {
-  // Nothing to return 
-    
+  // Nothing to return
+
  }
 */
 
 /*
    modifiers and type alias
-    modifiers 
-     modify the length of data ==> see limites 
+    modifiers
+     modify the length of data ==> see limites
      signed [int  ,char ]
-      ....store postive , negative integers and  0 
+      ....store postive , negative integers and  0
         int is signed By defualt
      unsigned [int ,char]
-     .....store the postives only 
-     
+     .....store the postives only
+
      short[int]
-     ....Can Be short insted of short int 
+     ....Can Be short insted of short int
 
      long[int ,double]
      ........store maximum value
-     .....can be long insted of long int 
+     .....can be long insted of long int
 
 
-     type alias 
+     type alias
 ......using modifiers = type;
 typedef unsigned long UL
 
 
-  //code 
+  //code
 
-      signed int num_one = 1000 ; 
+      signed int num_one = 1000 ;
     signed int num_two = -1000;
 
     unsigned  int num_three = 1001 ;
     unsigned int num_four =  -1002 ;  // will cause undefined behavior
-     
+
      // if i want use a litle space in memory i can use short int instead of int
    short int num_five = 1003 ;  // cann be write as short num_five = 1003 ;
     cout<<sizeof(num_five)<<endl; // 2 bytes
-     
+
     // if you wnat to store larg numbers , use long
      long int num_six = 8000000 ; // can be write as long num_six = 1004 ;
      cout<< num_six << "\n";
      cout << sizeof(num_six) << endl ; // 4 bytes
-     // if you want to be more accurrate, and calc high precison values with double value , use long double 
+     // if you want to be more accurrate, and calc high precison values with double value , use long double
      long double num_seven = 1005.12345678901234567890L ;
      double num_eight = 1005.12345678901234567890;
      cout<< num_seven << "\n";
@@ -319,11 +311,11 @@ typedef unsigned long UL
 */
 
 /*
-  type conversion 
+  type conversion
      convert data of one type to another type
 
-     --Implicit conversion 
--------------Conversion is Done Autmatically by the compiler 
+     --Implicit conversion
+-------------Conversion is Done Autmatically by the compiler
 
      ---- Explicit conversion
   -----------conversion is done by programmer  , using type casting or function li
@@ -332,14 +324,14 @@ typedef unsigned long UL
      ---data loss
       ----when larger type is converted to smaller type
 
-       // code 
+       // code
 
         int num1 = 20 ;
     char ch = 'C';
      cout << num1 + ch <<endl;
 
     //  cout <<int(ch) << endl;// 67
-     
+
     cout <<"\n====================\n";
     cout <<"====================\n";
      double b = 20.5;
@@ -357,14 +349,14 @@ typedef unsigned long UL
      cout << sizeof(int(c)+num4) << endl;
     cout <<"====================\n";
     cout <<"====================\n";
-    
+
 
 
 */
 
 /*
-  arithmetic operators 
-   + , - , * , / , % , ++ , -- 
+  arithmetic operators
+   + , - , * , / , % , ++ , --
    + addition
    - subtraction
    * multiplication
@@ -374,16 +366,16 @@ typedef unsigned long UL
    -- decrement
 */
 
- /*
-  Assignment operators : for assignning operations
-   = , += , -= , *= , /= , %=  
-   = assignment
-   += addition assignment
-   -= subtraction assignment
-   *= multiplication assignment
-   /= division assignment
-   %= modulus assignment
- 
+/*
+ Assignment operators : for assignning operations
+  = , += , -= , *= , /= , %=
+  = assignment
+  += addition assignment
+  -= subtraction assignment
+  *= multiplication assignment
+  /= division assignment
+  %= modulus assignment
+
 */
 /*
   increament and decrement operators
@@ -391,8 +383,8 @@ typedef unsigned long UL
 */
 
 /*
-comparison operators 
-  == , != , > , < , >= , <= 
+comparison operators
+  == , != , > , < , >= , <=
   == equal to
   != not equal to
   > greater than
@@ -401,14 +393,14 @@ comparison operators
   <= less than or equal to
 */
 /*
-logical operators 
-  && , || , ! 
+logical operators
+  && , || , !
   && logical AND
   || logical OR
   ! logical NOT
 */
 /*
- precedence of operators 
+ precedence of operators
   1) () parentheses
   2) ++ , -- pre increment and decrement
   3) * , / , % multiplication , division and modulus
@@ -418,13 +410,13 @@ logical operators
   7) || logical OR
    in case of same precedence, the associativity is from left to right
 
-   betwise operatots : 
-      
-   spaceship operators : 
+   betwise operatots :
+
+   spaceship operators :
 */
 /*
-  cotrol flow - if condition 
-  syntax 
+  cotrol flow - if condition
+  syntax
    if (condition is true) {
     // code to be executed if condition is true
    } else {
@@ -436,14 +428,14 @@ logical operators
        {
          cout << "beWare you are under age \n";
        }
-       cout <<"See you \n"; 
-  return 0 ; 
-  
+       cout <<"See you \n";
+  return 0 ;
+
    }
 */
 /*
-   else if , else 
-   //code 
+   else if , else
+   //code
 
     int age =18 ;
    const int points = 500 ;
@@ -461,7 +453,7 @@ logical operators
 /*
  Nested if Conditions
 
- //CODE 
+ //CODE
 
   int age = 27;
    int points= 1500;
@@ -477,23 +469,23 @@ logical operators
 */
 /*
   ternary operator
-   syntex 
+   syntex
    (condition is true) ? (code to be executed if condition is true) : (code to be executed if condition is false);
 
-   // code 
+   // code
      int age = 19;
    cout << (age >=18) ?  "Your Age is Accepted" : "Your Age is Not Accepted" ;
     // can asssign to variable
      string message =  (age >=18) ?  "Your Age is Accepted" : "Your Age is Not Accepted" ;
-  return 0 ; 
+  return 0 ;
 */
 
 /*
- Nested ternary operator 
-  syntex 
+ Nested ternary operator
+  syntex
   (condition1) ? (code to be executed if condition1 is true) : (condition2) ? (code to be executed if condition2 is true) : (code to be executed if both conditions are false);
 
-  // code 
+  // code
     int age = 20;
 int points = 900;
    cout << (age>=22 ? "Your age not accepted" : (points >=800 ? "Your points is accepted" : "Your points is not accepted")) ;
@@ -528,7 +520,7 @@ int points = 900;
 
      ......................................................
   ------------User Rank checker
-              ....code 
+              ....code
                 int Rank;
     cin >>Rank;
      if(Rank == 0)
@@ -540,14 +532,14 @@ int points = 900;
        cout << "Your Rank is Good \n";
        else
        cout<< "Your rank is good";
-       return 0 ; 
-  
+       return 0 ;
+
   ---simple calculator
-  ............code 
+  ............code
       int num1 , num2 ,op;
    cout << "Type number 1 \n";
    cin >> num1 ;
-   
+
    cout << "Type number 2 \n";
    cin >> num2 ;
     cout << "choose operation \n";
@@ -565,13 +557,13 @@ int points = 900;
     else if(op == 4)
        cout << "Result: " << num1 / num2 << "\n";
     else
-       cout << "Invalid operator" << "\n"; 
+       cout << "Invalid operator" << "\n";
 
 
 */
 /*
- switch 
- ........code 
+ switch
+ ........code
   int day = 1;
   switch(day)
   {
@@ -590,7 +582,7 @@ int points = 900;
 */
 /*
  apps on switch
-   /// 1 
+   /// 1
     int code ;
 
    cout << "Enter yout code \n";
@@ -621,13 +613,13 @@ int points = 900;
    cin >> years;
      switch(years)
      {
-       case 1 : 
+       case 1 :
        discount= 20;
        break;
-       case 2 : 
+       case 2 :
        discount= 30;
        break;
-       case 3 : 
+       case 3 :
        discount= 40;
        break;
      }
@@ -636,11 +628,11 @@ int points = 900;
 
 }
      ......................
-     //app 3 ) 
+     //app 3 )
        int num1 , num2 ,op;
    cout << "Type number 1 \n";
    cin >> num1 ;
-   
+
    cout << "Type number 2 \n";
    cin >> num2 ;
     cout << "choose operation \n";
@@ -664,10 +656,10 @@ int points = 900;
         cout << "Result: " << num1 << "/" << num2 << " = " << num1 / num2 << "\n";
         break;
       default:
-        cout << "Invalid operator" << "\n"; 
+        cout << "Invalid operator" << "\n";
     }
-  
-     
+
+
 */
 /*
  Array : what is array ?
@@ -678,20 +670,20 @@ int points = 900;
     check array size
      create array without size
 
-      //code 
+      //code
          int nums[4] = {12 ,12, 13,14};
    cout << sizeof(nums); // 16
    cout << sizeof(int); // 2
-  
+
 
    int rands[] ={12,12,12};   // valid
-   int randss[]{12,12,12}; // valid  
+   int randss[]{12,12,12}; // valid
 */
 
 /*
-  Access elemnts & memory location 
+  Access elemnts & memory location
 
-   .........code 
+   .........code
        int nums[]{100,200,900};
    cout << "First Element :" << nums[0] << "\n";
    cout << "last Element :" << nums[2] << "\n";
@@ -701,14 +693,14 @@ int points = 900;
      cout <<"Third Element Location : " <<&nums[2] << "\n";
 */
 /*
- Arrays 
+ Arrays
   declare empty array
-  add elements to arrray 
-   update array element 
-    get len of array with sizeof 
+  add elements to arrray
+   update array element
+    get len of array with sizeof
 
     ............
-    //code 
+    //code
        int nums[4] ;
    nums[3] = 400 ;
    nums[2] = 500 ;
@@ -718,11 +710,224 @@ int points = 900;
        cout << "Element 2 : " << nums[1] << "\n";
        cout << "Element 3 : " << nums[2] << "\n";
        cout << "Element 4 : " << nums[3] << "\n";
-  return 0; 
+  return 0;
   int anums[] = {100,209,300,400,500,600};
-  cout << "The number of elements in the array is : " << sizeof(anums) / sizeof(anums[0]) << "\n"; 
+  cout << "The number of elements in the array is : " << sizeof(anums) / sizeof(anums[0]) << "\n";
 */
-int main () 
-{
+/*
+  two dimesion array
+     ..........code
+       int points_a[3] = {1,2,3};
+  int points_b[3] = {4,5,6};
+  int points_ؤ[3] = {7,8,9};
+ // good practice
+   int points[3][3] ={{1,2,3},{4,5,6},{7,8,9}};
+    cout << "\n";
+    cout << points[1][2] << endl ;
+    cout << points[2][0] << endl ;
+    cout << points[2][2] << endl ;
+ // bad practice
+  //      int points[3][3] ={1,2,3,4,5,6,7,8,9};
+  //  cout << "\n";
+  //   cout << points[1][2] << endl ;
+  //   cout << points[2][0] << endl ;
+  //   cout << points[2][2] << endl ;
 
+     // we can use constant values to the dimension of the array
+       const int rows = 3  ;  // must be constant
+        const int cols =3 ;
+          int points[rows][cols] ={{1,2,3},{4,5,6},{7,8,9}}; // ritht......
+*/
+/*
+ Arrays
+  ...array class
+  ...test Methods
+
+   Syntex
+    Template <Type , size> Identifier .
+      ..........code
+       //  int poinst[4] ={1,2,3,4}; // c style array
+   array<int,4> points = {1,2,3,4}; // c++ style array
+    cout << points[0] << "\n"; // access element by index
+    cout << points[1] << "\n";
+    cout << points[2] << "\n";
+    cout << points[3] << "\n";
+     cout << "Element count is " << points.size() << "\n";
+
+     points.fill(10);
+     cout<<"After Fill \n";
+     cout << points[0] << "\n"; // access element by index
+     cout << points[1] << "\n";
+     cout << points[2] << "\n";
+     cout << points[3] << "\n";
+     .............Fill , size
+*/
+/*
+ Methods Discussions
+  at // access element by index with bound checking
+  front ==> access the first element
+  back ==> access the last element
+  fill ==> fill the array with a specific value
+  size ==> return the number of elements in the array
+  empty ==> check if the array is empty or not
+
+
+
+*/
+/*
+ Array Traning
+   Guess the Number from the seq
+    .........code 
+        int points = 0;
+  int answers[3];
+  cout << "tYPE THE MESSION NUMBER iN Sequences \n";
+  cout << "Sequence 1 \n";
+  cout << "1 | 5 | 10 | 20 | ?? \n";
+  cin >> answers[0];
+  cout << "Sequence 2 \n";
+  cout << "2 | 4 | 32 | 16 | ?? \n";
+  cin >> answers[1];
+  cout << "Sequence 3 \n";
+  cout << "1 | 25| 9 | 16 | ?? \n";
+  cin >> answers[2];
+  int question[3][5] = {
+      {12, 14, 16, 18, 20},
+      {2, 4, 8, 16, 32},
+      {1, 4, 9, 16, 25}};
+  if (answers[0] == question[0][4])
+  {
+    points += 10;
+  }
+  if (answers[1] == question[1][4])
+  {
+    points += 10;
+  }
+  if (answers[2] == question[2][4])
+  {
+    points += 10;
+  }
+  cout << "Your points is : " << points << " from 30 point" << "\n";
+
+  return 0;
 }
+    */
+   /*
+    String : what is the String 
+    String types 
+     c style string using 
+      string class using stadred lib
+      test types size 
+      Nyll Terminated string 
+      \0 ==> Null 
+ 
+
+      ... string is array of charachter 
+        ...code 
+           char name_a[] ="ELzero";
+    cout << name_a << "\n";  // print the string
+    cout << sizeof(name_a) << "\n"; // print the size of the string including the null terminator
+      // nukk terminator is  ? 
+      
+    cout << name_a[6] << "\n"; // will print the null terminator which is \0 and it will not be visible in the output
+     cout << int(name_a[6]) << "\n"; // will print the ASCII value of the null terminator which is 0
+
+      // string with class way 
+       string name_e  = "kamalAboueidd";
+        cout<< name_e.size() << "\n"; // will be  
+     return 0 ; 
+   */
+  /*
+    str conct 
+     ...strcat : 
+     + :
+      apped : 
+    ............code
+         string firstname = "omar";
+  string lastname = "ahmed";
+  cout << firstname + lastname << "\n"; // now concatenates using std::string
+  // if you need a C-style concatenation, ensure the destination buffer is large enough and use strcat on char arrays
+   cout << firstname + " " + lastname << "\n"; // concatenates with a space in between
+    cout << firstname.append(" ").append(lastname) << "\n"; // using append method
+}
+  */
+ /*
+   loop 
+    for
+    syntex 
+  for(initialization; condition; increment/decrement) {
+    // code to be executed   
+}
+    */
+   /*
+    for loop advanced syntax
+   int nums[5] = {100,200,300,400,500};
+   for(int index = 0 ; index < 5 ; index++)
+   { 
+      if(index > 1 && index <4){
+
+        cout << nums[index] << "\n"; // 
+      }
+   }
+  int i = 0;
+    for(;;) {
+      if(i > 1 && i < 4) {
+        
+        cout << nums[i] << "\n";
+      }
+      i++;
+    }
+  return 0 ;   
+   */
+  /*
+   practcing
+        int nums[] = {100,200,300,400,500,600};
+  int numSize = sizeof(nums) / sizeof(nums[0]);
+  cout << "The number of elements in the array is : " << numSize << "\n";
+  //  for(int i = 0 ; i < numSize ; i++)  // 100 300 50 
+  //  {     
+  //   if(i % 2 == 0) // check if the index is even
+  //       cout << nums[i] << "\n"; // 
+      
+  //  }
+  // for(int i = numSize-1 ; i >=0 ; i--){
+  //    if(i>1)
+  //     cout << nums[i] << "\n"; // print the first element
+  // }
+  int i = numSize-1;
+  for(;  ; ){
+     if(i < 0) break; // exit the loop if i is less than 0
+     if(i>1)
+      cout << nums[i] << "\n"; // print the first element
+    i--;
+  }
+  return 0;
+  */
+
+#include <array>
+#include <string.h>
+#include <iostream>
+// #include <string>
+using namespace std;   
+int main()
+{ 
+ string products[] = {"item 1" , "item 2","item 3", "item 4","item 5"};
+ string sizes[] = {"small" , "medium" , "large"};
+ const int products_size = sizeof(products) / sizeof(products[0]);
+ const int sizes_size = sizeof(sizes) / sizeof(sizes[0]);
+    for (int i = 0; i < products_size ; i++)
+    {
+      cout << "products name: \n";
+      cout << products[i] << "\n";
+      cout << "Sizes : \n";
+        for (int j = 0; j < sizes_size; j++)
+        {
+            cout << sizes[j];
+            if(j < sizes_size - 1) {
+                cout << " | ";
+            }
+        }
+      cout << "\n";
+        cout << "========================\n";
+    }
+}
+ 
